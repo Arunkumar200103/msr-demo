@@ -1,0 +1,202 @@
+/* Brand for Larger Screens */
+.logo-large-screen {
+  width: 250px;  /* Adjust size for large screens */
+  height: 80px;
+  margin-left: 20px;
+}
+.navbar{
+  width: 100%;
+  margin-right: 80px;
+  padding: 0rem 1rem;
+}
+
+/* Navigation Links Hover Effect */
+.nav-link {
+  color: #212529;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: transparent; /* Make the text color transparent */
+  background-image: linear-gradient(45deg, #1a73e8, #00d4ff, #00c896, #4b33a8); /* Gradient background */
+  -webkit-background-clip: text; /* Clip the gradient to the text */
+  transition: color 0.3s ease, background-image 0.3s ease; /* Smooth transition */
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+  background-color: white !important;
+  margin-top: 0;
+  z-index: 1000;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  font-size: 14px;
+}
+
+
+/* ===========================
+   Mobile Styles
+   =========================== */
+@media (max-width: 991px) {
+  /* Logo */
+  .logo-small-screen {
+    width: 150px;
+    height: 70px;
+  }
+
+  /* Navbar container */
+  .navbar {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+
+  /* Hamburger */
+  .hamburger {
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+  .bar {
+    width: 30px;
+    height: 3px;
+    background: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+  .bar.open:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .bar.open:nth-child(2) {
+    opacity: 0;
+  }
+  .bar.open:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Mobile menu – glassmorphism slide-in */
+ .navbar-collapse {
+  position: fixed;
+  top: 70px;
+  right: 0;
+  width: 270px;
+  max-height: 80vh; /* Prevents overflow */
+  height: auto;     /* Let it expand */
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  transform: translateX(100%);
+  transition: transform 0.5s ease, max-height 0.5s ease;
+  padding-top: 1rem;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.25);
+  overflow-y: auto; /* Allows scrolling if content exceeds max-height */
+}
+
+  .navbar-collapse.show {
+    transform: translateX(0);
+  }
+
+  /* Nav items */
+  .navbar-nav {
+    display: block;
+    text-align: start;
+    padding: 0;
+  }
+  .navbar-nav .nav-item {
+    margin: 0.5rem 1rem;
+  }
+
+  /* Animated gradient links */
+  .navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0.6rem 0.8rem;
+    background: linear-gradient(90deg, #1a73e8, #00d4ff, #00c896, #4b33a8);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 6s ease infinite;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Dropdown inside mobile */
+  .dropdown-menu {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+  }
+  .dropdown-menu.show {
+    max-height: 400px;
+    opacity: 1;
+    padding: 4px 0;
+  }
+
+  /* Card style for dropdown items */
+  .dropdown-item {
+    background: rgba(255, 255, 255, 0.7);
+    margin: 6px 12px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #212529;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .dropdown-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    color: #4b33a8;
+  }
+
+  /* Remove default caret & add custom icons */
+  .dropdown-toggle::after {
+    display: none;
+  }
+  .dropdown-toggle::before {
+    content: "→";
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #212529;
+    transition: transform 0.3s, color 0.3s;
+  }
+  .dropdown-toggle[aria-expanded="true"]::before {
+    content: "×";
+    font-size: 22px;
+    color: #4b33a8;
+    transform: translateY(-50%) rotate(90deg);
+  }
+}

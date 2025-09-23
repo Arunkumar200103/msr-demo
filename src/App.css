@@ -1,0 +1,112 @@
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 200;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* plain white or any solid color */
+  overflow-x: hidden;
+}
+
+body.loading-active {
+  background: white !important;
+}
+
+.white-background {
+  background: white !important;
+}
+
+/* You can delete this rule completely if you're not going to use images */
+.background-active {
+  background: white !important;
+}
+
+header {
+  background: #fff;
+  color: #212529;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky; /* Make the header sticky */
+  top: 0; /* Stick the header to the top of the viewport */
+  z-index: 1000; /* Ensure it stays on top of other content */
+  width: 100%; /* Ensure it spans the full width */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for better visibility */
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  font-size: 16px;
+  font-family: 'BebasNeuePro-Bold';
+  text-transform: uppercase;
+}
+
+header ul li a {
+  color: #212529;
+  text-decoration: none;
+}
+header ul li:nth-child(5) a { 
+  border-bottom: none; /* If a border was used for underline */
+}
+
+/* Scroll To Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 65px; /* Position above footer */
+  right: 20px;
+  width: 50px; /* Adjust for circular size */
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-to-top svg {
+  color: #00aac8; /* Icon color */
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.scroll-to-top:hover svg {
+  transform: translateY(-3px); /* Hover effect */
+}
+/* Hover Effect */
+.scroll-to-top:hover {
+  background: linear-gradient(135deg, #4ebdae, #46d4c9);
+  transform: scale(1.1);
+}
+
+
+
+/* Hide on screens smaller than 768px (mobile) */
+@media (max-width: 768px) {
+  body {
+    background-image: url('/src/img/mobilebg.jpeg'); /* Mobile-specific background */
+    background-size: cover;  
+    background-position: center; 
+    background-attachment: fixed;
+  }
+  .scroll-to-top {
+    display: none;
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,112 @@
+/* Single container for both title and carousel */
+.brands-section {
+  background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+  backdrop-filter: blur(10px); /* Blurry effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  padding: 40px 20px 20px; /* Reduced top padding to 40px, bottom padding to 20px */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  text-align: center;
+  width: 100%;
+  margin-top: 3rem;
+  border-radius: 12px; /* Optional: Rounded corners */
+  font-weight: bold;
+}
+
+.brands-section h2 {
+  font-family: 'BebasNeuePro-Bold';
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Carousel Styling */
+.brand-carousel {
+  display: flex;
+  width: max-content; /* Ensures container expands as needed */
+  animation: scroll-left 30s linear infinite; /* Smooth scroll */
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+/* Flex container for logos */
+.brand-carousel .logos {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 30px;
+}
+
+/* Individual logos styling */
+.brand-carousel .logos img {
+  height: 100px; /* Adjust height as needed */
+  margin: 20px 40px; /* Space between logos */
+  transition: transform 0.5s ease; /* Smooth zoom effect */
+}
+
+/* Zoom effect on hover */
+.brand-carousel .logos img:hover {
+  transform: scale(1.1);
+}
+
+/* Keyframes for scrolling effect */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  /* Container */
+  .brands-section {
+    padding: 20px 10px;         /* Smaller padding */
+    margin-top: 1.5rem;         /* Reduced margin */
+    border-radius: 8px;         /* Slightly smaller corners */
+  }
+
+  /* Title */
+  .brands-title {
+    font-size: 1.5rem;          /* Smaller title text */
+    text-shadow:  
+      -1px -1px 0 black,  
+       1px -1px 0 black,  
+      -1px  1px 0 black,  
+       1px  1px 0 black;  
+  }
+
+  .brands-section h2 {
+    margin-bottom: 15px;
+  }
+
+  /* Carousel container */
+  .brand-carousel {
+    animation: scroll-left 20s linear infinite; /* Faster scroll for mobile */
+    padding: 5px 0;
+  }
+
+  /* Logos container */
+  .brand-carousel .logos {
+    gap: 10px;                  /* Smaller gaps */
+  }
+
+  /* Logo images */
+  .brand-carousel .logos img {
+    height: 50px;               /* Smaller logo height */
+    margin: 0 10px;  
+    width: 70px;           /* Less spacing between logos */
+  }
+}
+
+/* Very small devices */
+@media (max-width: 480px) {
+  .brands-title {
+    font-size: 1.2rem;          /* Even smaller title text */
+  }
+
+  .brand-carousel .logos img {
+    height: 60px;               /* Logos shrink more */
+    margin: 0 6px;              /* Very small gaps */
+  }
+}

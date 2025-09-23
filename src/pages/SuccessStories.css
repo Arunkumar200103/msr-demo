@@ -1,0 +1,125 @@
+.success-container {
+  text-align: center;
+  padding: 0px;
+  background: transparent; /* Light background */
+  margin-top: 0rem;
+}
+
+.success-container h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #333;
+  font-family: 'BebasNeuePro-Bold';
+  text-transform: both;
+}
+
+/* Card container */
+.story-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Individual story card */
+.story-card {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 320px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Colorful Icons */
+.icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.industry {
+  color: #ff6b6b; /* Red */
+}
+
+.solar {
+  color: #f7b731; /* Yellow */
+}
+
+.safety {
+  color: #45aaf2; /* Blue */
+}
+
+/* Card Title */
+.story-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: #444;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Card Text */
+.story-card p {
+  font-size: 1rem;
+  color: #444;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 0rem !important;
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .success-container h2 {
+    font-size: 2rem;
+    font-family: 'BebasNeuePro-Bold';
+    text-transform: uppercase;
+  }
+  .story-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .story-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .success-container {
+    margin-top: 0rem;
+  }
+  .success-container h2 {
+    font-size: 2rem;
+    font-family: 'BebasNeuePro-Bold';
+    text-transform: uppercase;
+    
+  }
+  .story-card {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .icon {
+    font-size: 2.5rem;
+  }
+
+  .story-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .story-card p {
+    font-size: 0.95rem;
+    text-align: justify;
+  }
+}

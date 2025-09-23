@@ -1,0 +1,300 @@
+.services-hero {
+  position: relative;
+  margin-top: -60px;
+  margin-bottom: -60px;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Background layer for animation */
+.services-hero-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 4rem 0;
+}
+
+/* Background animation */
+.services-hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(26, 115, 232, 1); /* Fallback solid color */
+  background-image: linear-gradient(45deg, #00c896, #4b33a8);
+  opacity: 0;
+  z-index: -1;
+}
+
+/* Animate background from left */
+.bg-animate::before {
+  opacity: 1;
+  animation: fadeInLeft 1.5s ease-in-out forwards;
+}
+
+/* Keyframe for fadeInLeft */
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Delay text animations (appear after background finishes) */
+.delay-1s {
+  animation-delay: 1.5s; /* Matches fadeInLeft duration */
+}
+
+/* Text Styling */
+.services-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-family: 'BebasNeuePro-Bold'; /* Ensure correct font */
+  text-transform: uppercase;
+}
+
+.services-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Services Overview */
+.services-overview {
+  padding: 2rem 0;
+  background-color: white;
+  background: rgba(255, 255, 255, 0.15); /* ✅ Semi-transparent Background */
+  backdrop-filter: blur(15px); /* ✅ Blurred Background */
+  -webkit-backdrop-filter: blur(15px); /* ✅ Safari Support */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* ✅ Soft Shadow Effect */
+}
+.services-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px; /* Adds space between the title and the line */
+  text-align: left;
+  font-family: 'BebasNeuePro-Bold';
+  text-transform: uppercase;
+  color: white; /* Text color */
+text-shadow:  
+    -2px -2px 0 black,  
+     2px -2px 0 black,  
+    -2px  2px 0 black,  
+     2px  2px 0 black;  
+}
+.services-out {
+  display: block;
+  margin-top: 10px;
+}
+
+/* Red line (sline) styling */
+.services-title .sline {
+  width: 60px;
+  height: 2px;
+  background-color: #4b33a8; /* Orange color for the line */
+  margin-top: 0px; /* Adjust space between the title and the line */
+  display: block;
+  transition: width 0.5s ease-in-out; /* Smooth animation */
+}
+
+.services-overview h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-family: 'BebasNeuePro-Bold';
+  text-transform: both;
+  text-align: center;
+  color: #343a40;
+}
+
+.services-overview .row {
+  display: flex;
+  justify-content: center;
+  gap: 0rem;
+  flex-wrap: wrap;
+}
+
+.services-overview .card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+.services-overview .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.services-overview .card img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.service-icon {
+  margin-bottom: 1rem;
+  color: #007bff;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.services-overview h5 {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.services-overview ul {
+  list-style: disc;
+  padding: 0;
+  margin: 0;
+}
+
+.services-overview ul li {
+  font-size: 1rem;
+  color: #555;
+  text-align: justify;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.py-5 {
+  padding-top: 2rem !important;
+  padding-bottom: 0rem !important;
+  
+}
+.my-5 {
+  margin-top: 0rem 0rem!important;
+  margin-bottom: 0rem !important;
+  width: 100%;
+}
+
+/* Call-to-Action Section */
+.services-cta {
+  background-color: rgba(26, 115, 232, 1); /* Fallback solid color */
+  background-image: linear-gradient(45deg, #00c896, #4b33a8);
+  color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.services-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'BebasNeuePro-Bold';
+  text-transform: both;
+}
+
+.services-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.services-cta .btn {
+  background: transparent;
+  border: none; /* Border color */
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.services-cta .btn:hover {
+  transform: scale(1.05); /* Slight scale effect on hover */
+  background-color: rgba(26, 115, 232, 1); /* Fallback solid color */
+  background-image: linear-gradient(45deg, #00c896, #4b33a8);  /* Gradient background */
+  color: white; /* Ensure text is white on hover */
+  text-decoration: none; /* Optional: Prevent underlining */
+}
+
+/* Responsive Design */
+/* Mobile View - Services Page */
+@media (max-width: 768px) {
+  /* Hero Section */
+  .services-hero {
+    padding: 0px 0px;
+  }
+
+  .services-hero h1 {
+    font-size: 24px; 
+  }
+
+  .services-hero p {
+    font-size: 16px; 
+  }
+
+  /* Category Selection */
+  .category-selection {
+    padding: 10px 0;
+  }
+
+  .category-selection .card {
+    margin-bottom: 10px;
+  }
+
+  /* Service Cards */
+  .service-card {
+    margin-bottom: 20px;
+  }
+
+  .service-card img {
+    height: 150px !important; /* Reduce image height */
+  }
+
+  /* Make cards full width on mobile */
+  .services-overview .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Call-to-Action Section */
+  .services-cta {
+    padding: 30px 15px;
+  }
+
+  .services-cta h2 {
+    font-size: 22px;
+  }
+
+  .services-cta p {
+    font-size: 14px;
+  }
+
+  .services-cta .btn-lg {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

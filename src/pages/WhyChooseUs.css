@@ -1,0 +1,345 @@
+
+.why-choose-hero {
+    position: relative;
+    margin: 0rem;
+    margin-top: -55px;
+    margin-bottom: -50px;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Background layer for animation */
+  .why-choose-hero-bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 4rem 0;
+  }
+  
+  /* Background animation */
+  .why-choose-hero-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(26, 115, 232, 1); /* Fallback solid color */
+    background-image: linear-gradient(45deg, #00c896, #4b33a8);
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  /* Animate background */
+  .bg-animate::before {
+    opacity: 1;
+    animation: fadeInRight 1.5s ease-in-out forwards;
+  }
+  
+  /* Keyframe for fadeInRight */
+  @keyframes fadeInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Delay text animations (appear after background finishes) */
+  .delay-1s {
+    animation-delay: 1.5s; /* Matches fadeInRight duration */
+  }
+
+  /* Text Styling */ 
+  .why-choose-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-family: 'BebasNeuePro-Bold';
+    text-transform: uppercase;
+  }
+  
+  .why-choose-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+
+/* Why Choose Us Overview */
+.why-choose-overview {
+    background-color: white;
+}
+
+.about-mission .py-5 {
+    margin-top: 0px;
+    width: 100%;
+    overflow-x: hidden;
+}
+.why-choose-cta .py-5 {
+    width: 100%;
+    margin-bottom: 50px;
+    overflow-x: hidden;
+}
+/* Using Flexbox for Grid Layout */
+.why-choose-overview .row {
+    display: flex;
+    flex-wrap: wrap; /* Ensure the cards wrap on smaller screens */
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-top: 1rem;
+    
+}
+
+/* Equal height for the cards */
+.why-choose-overview .col-md-4 {
+    flex: 1 1 calc(33.333% - 1.5rem); /* 3 cards in a row with space between */
+    display: flex;
+    flex-direction: column; /* Keeps card content stacked */
+    align-items: stretch; /* Make sure the card stretches to fill space */
+}
+
+/* Card styling */
+.why-choose-overview .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures even distribution of content */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: #fff;
+    height: 100%; /* Ensures cards are the same height */
+    overflow: hidden;
+}
+
+/* Prevent card content from overflowing */
+.why-choose-overview .card .card-body {
+    flex-grow: 1; /* Allow the content to fill available space */
+}
+
+/* Card hover effect */
+.why-choose-overview .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Styling */
+.why-choose-overview .card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.why-choose-overview .card i:hover {
+    transform: scale(1.1);
+}
+
+/* Title Hover Border Animation */
+.why-choose-overview h5 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'BebasNeuePro-Bold';
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    overflow: hidden;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Border Animation with Gradient */
+.why-choose-overview .card {
+    position: relative;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient border */
+.why-choose-overview .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover full width */
+    height: 100%;
+    background: linear-gradient(to bottom, blue 0%, cyan 100%);
+    transition: opacity 0.4s ease-in-out;
+    border-radius: 10px;
+    z-index: -1;
+    opacity: 0; /* Initially hidden */
+}
+/* Add hover effect if needed */
+.why-choose-overview .card:hover::before {
+    opacity: 1; /* Show gradient on hover */
+}
+
+/* Border expands fully on hover */
+.why-choose-overview .card:hover::before {
+    width: 100%;
+}
+
+/* Text and border color change on hover */
+.why-choose-overview .card:hover h5 {
+    color: white; /* Change text color */
+}
+
+.why-choose-overview .card:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Paragraph Styling */
+.why-choose-overview p {
+    font-size: 1rem;
+    color: black;
+    text-align: justify;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .why-choose-overview .card {
+        width: 100%;
+    }
+}
+
+
+/* Call-to-Action Section */
+.why-choose-cta {
+    background-color: rgba(26, 115, 232, 1); /* Fallback solid color */
+    background-image: linear-gradient(45deg, #00c896, #4b33a8);
+    padding: 4rem 0;
+    color: #fff;
+}
+
+.why-choose-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'BebasNeuePro-Bold';
+    text-transform: both;
+}
+
+.why-choose-cta p {
+    font-size: 1.2rem;
+}
+
+.why-choose-cta .btn {
+    background: transparent;
+    border: none; /* Border color */
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.why-choose-cta .btn:hover {
+    background-color: rgba(26, 115, 232, 1); /* Fallback solid color */
+    background-image: linear-gradient(45deg, #00c896, #4b33a8);
+    text-decoration: none;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .why-choose-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .why-choose-hero p {
+        font-size: 1rem;
+    }
+
+    /* Why Choose Us Overview */
+    .why-choose-overview .card {
+        padding: 1rem;
+    }
+
+    .why-choose-overview h5 {
+        font-size: 1.3rem;
+        font-family: 'BebasNeuePro-Bold';
+        text-transform: both;
+    }
+
+    .why-choose-overview p {
+        font-size: 0.9rem;
+    }
+
+    /* Call-to-Action Section */
+    .why-choose-cta h2 {
+        font-size: 2.2rem;
+        font-family: 'BebasNeuePro-Bold';
+        text-transform: both;
+    }
+
+    .why-choose-cta p {
+        font-size: 1rem;
+    }
+
+    .why-choose-cta .btn {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+
+    /* Responsive Grid for Cards */
+    .why-choose-overview .row {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .why-choose-overview .col-md-4 {
+        flex: 1;
+    }
+
+    /* Icon Styling */
+    .why-choose-overview .card i {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .why-choose-overview .card i:hover {
+        transform: scale(1.1);
+    }
+
+    /* Spacing and Layout Adjustments */
+    .why-choose-cta {
+        padding: 2.5rem 0;
+    }
+
+    .why-choose-cta h2 {
+        font-size: 2rem;
+    }
+
+    .why-choose-cta p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .why-choose-cta .btn {
+        font-size: 1rem;
+        padding: 0.7rem 1.8rem;
+    }
+}
