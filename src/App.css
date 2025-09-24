@@ -94,12 +94,7 @@ header ul li:nth-child(5) a {
 
 /* Hide on screens smaller than 768px (mobile) */
 @media (max-width: 768px) {
-  body {
-    background-image: url('/src/img/mobilebg.jpeg'); /* Mobile-specific background */
-    background-size: cover;  
-    background-position: center; 
-    background-attachment: fixed;
-  }
+
   .scroll-to-top {
     display: none;
   }

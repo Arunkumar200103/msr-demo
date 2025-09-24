@@ -91,7 +91,8 @@
   position: fixed;
   top: 70px;
   right: 0;
-  width: 270px;
+  width: 400px;
+  margin-top: 10px;
   max-height: 80vh; /* Prevents overflow */
   height: auto;     /* Let it expand */
   background: rgba(255, 255, 255, 0.25);
@@ -112,7 +113,7 @@
   /* Nav items */
   .navbar-nav {
     display: block;
-    text-align: start;
+    text-align: center;
     padding: 0;
   }
   .navbar-nav .nav-item {
@@ -122,14 +123,15 @@
   /* Animated gradient links */
   .navbar-nav .nav-link {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: bold;
+    font-family: fantasy;
     padding: 0.6rem 0.8rem;
     background: linear-gradient(90deg, #1a73e8, #00d4ff, #00c896, #4b33a8);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradientMove 6s ease infinite;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    
   }
   @keyframes gradientMove {
     0% {
@@ -167,6 +169,7 @@
     padding: 10px 15px;
     border-radius: 8px;
     font-size: 15px;
+    font-family: fantasy;
     font-weight: 500;
     color: #212529;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);

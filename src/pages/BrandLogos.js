@@ -1,8 +1,12 @@
 import React from "react";
 import "animate.css";
 import "./BrandLogos.css"; // Import the CSS file for custom styles
+import thiranLogo from "../img/T360Logo.png";
+import codingboss from "../img/Codingboss.png"
+
 
 const brands = [
+   
   { name: "Rockwell Automation", domain: "rockwellautomation.com" },
   { name: "Siemens", domain: "siemens.com" },
   { name: "Schneider Electric", domain: "schneider-electric.com" },
@@ -13,6 +17,8 @@ const brands = [
   { name: "Stahl", domain: "stahl.com" },
   { name: "Polycab", domain: "polycab.com" },
   { name: "Rittal", domain: "rittal.com" },
+    { name: "Thiran360AI", domain: "thiran360ai.com", img: thiranLogo }, 
+     { name: "CodingBoss", domain: "codingboss.in", img: codingboss },
   { name: "Modutec", domain: "modutec.com" },
   { name: "Comet", domain: "comet.com" },
   { name: "Pepperl+Fuchs", domain: "pepperl-fuchs.com" },
@@ -29,19 +35,15 @@ const BrandLogos = () => {
 
   return (
 
-  
-       
-
-
         <div className="brand-carousel">
           <div className="logos">
             {duplicatedBrands.map((brand, index) => (
               <div key={index} className="brand-item">
-                <img
-                  src={`https://logo.clearbit.com/${brand.domain}`}
-                  alt={`${brand.name} Logo`}
-                  className="img-fluid brand-logo"
-                />
+               <img
+  src={brand.img ? brand.img : `https://logo.clearbit.com/${brand.domain}`}
+  alt={`${brand.name} Logo`}
+  className="img-fluid brand-logo"
+/>
               </div>
             ))}
           </div>
