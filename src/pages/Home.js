@@ -382,6 +382,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      
 
       {/* Call to Action Section */}
       <section className="cta-section">

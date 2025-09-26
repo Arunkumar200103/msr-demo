@@ -25,7 +25,9 @@ import MaintenanceLifecycle from './Industries/MaintenanceLifecycle';
 import RenewableEnergy from './Industries/RenewableEnergy';
 import Loader from './components/Loader';
 import ScrollToTop from './components/ScrollToTop';
+import PartnersSection from './pages/PartnersSection';
 import './App.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function App() {
   const [loading, setLoading] = useState(true);

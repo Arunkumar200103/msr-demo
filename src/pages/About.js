@@ -6,6 +6,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { InView } from "react-intersection-observer";
 import SuccessStories from './SuccessStories';
+import PartnersSection from './PartnersSection';
 
 const About = () => {
   const navigate = useNavigate();
@@ -276,6 +277,10 @@ const About = () => {
           </div>
         </div>
       </section>
+      <PartnersSection />
+
+
+      
 
       {/* Success Stories Section */}
       <section className="success-stories-enhanced">
